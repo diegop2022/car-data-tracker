@@ -1,4 +1,4 @@
-const { Cars } = require('../models/cars');
+const Cars = require('../models/cars.js');
 
 const carsData = [
     {
@@ -40,4 +40,4 @@ const carsData = [
 
 const seedCars = () => Cars.bulkCreate(carsData);
 
-model.exports = seedCars
+module.exports = seedCars;

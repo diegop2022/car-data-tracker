@@ -15,7 +15,11 @@ userCar.init(
             autoIncrement: true,
             allowNull: false
         },
-        car_name: {
+        make: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        model: {
             type: DataTypes.STRING,
             allowNull: false
         },
