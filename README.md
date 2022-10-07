@@ -1,18 +1,19 @@
+<<<<<<< HEAD
 # car-data-tracker
 
-## description 
-" A car app designed to display multiple tables of different cars the user wants to compare. The user is allowed to enter, edit, and delete data of their own car, as well as, compare the data bewteen their own car and other cars. To compare the cars we used an api called ''need more info. "
+## User Story
 
-## how to install 
-need more info
+AS a teen I was really into cars and was always having to go to multiple different sources to find details about certain cars, or write in my notes to store my own cars.
+SO I hired a team to create a database collection for cars 
+SO THAT I could use the front end to add in and compare my own cars
 
-## how to use 
-need more info 
+## How to use
 
-## credits and licensure 
-Blangeres, Scott
-Sabeer, Ridhwan
-Pena, Diego
-Mata, Christopher
-Madrigal, Elizabeth
-Colby, Maxwell
+Clone files
+Run npm install
+Run npm start
+
+## Collaborators
+
+Maxwell Colby, Diego Pena, Chistopher Mata, Scott Blangeres, Elizabeth Madrigal
+>>>>>>> fcb761e7e86d9e385b3af2e537084ffcef4e7aa1
