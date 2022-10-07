@@ -15,5 +15,8 @@ Run npm start
 
 ## Collaborators
 
-Maxwell Colby, Diego Pena, Chistopher Mata, Scott Blangeres, Elizabeth Madrigal
->>>>>>> fcb761e7e86d9e385b3af2e537084ffcef4e7aa1
+Maxwell Colby
+Diego Pena 
+Chistopher Mata 
+Scott Blangeres 
+Elizabeth Madrigal 
