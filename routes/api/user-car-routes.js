@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const userCars = require('../../models/userCar');
+const userCars = require('../../models/userCars');
 
 // gets all the user's cars using "/api/usercar" endpoint 
 router.get('/', (req, res) => {
