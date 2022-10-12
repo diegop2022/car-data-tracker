@@ -13,8 +13,8 @@
   </head>
   <body>
     <header class="d-flex justify-content-between">
-      <h1 class="display-3">Car Data Tracker</h1>
-      <button class="btn btn-secondary btn-lg">Login</button>
+      <h1 class="display-4">Car Data Tracker</h1>
+      <button class="btn btn-secondary">Login</button>
     </header>
     <main>
       <p class="lead text-center">
@@ -24,10 +24,11 @@
         compare from each other. Please use our vehicle search section to find
         your car with ease.
       </p>
+      <hr />
       <div class="container">
-        <div class="card row-cols-3 d-inline-block">
+        <div class="card row-cols-1 d-inline-block">
           <label for="Year">Year:</label>
-          <select id="year">
+          <select class="form-select" id="year">
             <option value="2023">2023</option>
             <option value="2022">2022</option>
             <option value="2021">2021</option>
@@ -54,16 +55,18 @@
             <option value="2000">2000</option>
           </select>
           <label for="make">Make:</label>
-          <select name="make" id="make">
+          <select class="form-select" name="make" id="make">
             <option value="Nissan">Nissan</option>
             <option value="Honda">Honda</option>
           </select>
           <label for="model">Model:</label>
-          <select name="model" id="model">
+          <select class="form-select" name="model" id="model">
             <option value="Maxima">Maxima</option>
             <option value="Civic">Civic</option>
           </select>
+          <button class="btn" type="submit">Submit</button>
         </div>
+        <div class="list-group-item"></div>
       </div>
     </main>
     <script src="./assets/js/script.js"></script>
