@@ -1,27 +1,16 @@
 const express = require('express');
-const db = require('./db/connection');
-const apiRoutes = require('./routes/apiRoutes');
+const routes = require('../car-data-tracker/routes/index');
+// import sequelize connection
 
-const PORT = process.env.PORT || 3001;
 const app = express();
+const PORT = process.env.PORT || 3001;
 
-// Express middleware
-app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Use apiRoutes
-app.use('/api', apiRoutes);
+app.use(routes);
 
-// Default response for any other request (Not Found)
-app.use((req, res) => {
-  res.status(404).end();
-});
-
-// Start server after DB connection
-db.connect(err => {
-  if (err) throw err;
-  console.log('Database connected.');
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
-});
+//sync sequlize models to the database, then turn on the server
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}!`)
+})

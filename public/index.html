@@ -1,16 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="" />
-    <title>Car Data Tracker</title>
-  </head>
-  <body>
-    <header>
-      <h1>Car Data Tracker</h1>
-    </header>
-    <main></main>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Car Data Tracker</title>
+</head>
+
+<body>
+  <header>
+    <h1>Car Data Tracker</h1>
+  </header>
+  <main>
+    <div class="display-cars">
+      <div class="dropdown">
+        <button class="dropbtn">Cars</button>
+        <div class="dropdown-cars">
+          <button class="miata">Miata</button>
+          <button class="miata">Corolla</button>
+          <button class="miata">Tesla</button>
+          <button class="miata">Prius</button>
+          <button class="miata">CR-V</button>
+        </div>
+      </div>
+      <div class="user-dropdown">
+        <button class="user-dropbtn">User Cars</button>
+        <div class="user-dropdown-cars">
+        </div>
+      </div>
+    </div>
+
+    <div class="car-data">
+      <div class="seed-cars">
+        <h2 class="seed-make">Make</h2>
+        <h2 class="seed-model">Model</h2>
+        <h2 class="seed-year">Year</h2>
+        <h2 class="seed-engine">Engine-Type</h2>
+        <h2 class="seed-price">Price</h2>
+      </div>
+
+      <div class="user-cars">
+        <h2 class="user-make">Make</h2>
+        <h2 class="user-model">Model</h2>
+        <h2 class="user-year">Year</h2>
+        <h2 class="user-engine">Engine-Type</h2>
+        <h2 class="user-price">Price</h2>
+      </div>
+
+      <div class="create">
+        <div class="user-cars-create">
+          <h1>Create Car</h1>
+          <input class="user-make-create" placeholder="User Make" type="text"></input>
+          <input class="user-model-create" placeholder="User Model"></input>
+          <input class="user-year-create" placeholder="User Year"></input>
+          <input class="user-engine-create" placeholder="User Engine-Type"></input>
+          <input class="user-price-create" placeholder="User Price"></input>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>
