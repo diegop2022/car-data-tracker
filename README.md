@@ -1,19 +1,22 @@
 <<<<<<< HEAD
-# car-data-tracker
+# Car-Data-Tracker
 
-## User Story
+## Description 
+Car-Data-Tracker holds the data of multiple cars that the user can compare with their current car by allowing the user to enter, change, delete the data of their own car. This application will display multiple tables of cars and then include the user's car with the data that the user inputs
 
-AS a teen I was really into cars and was always having to go to multiple different sources to find details about certain cars, or write in my notes to store my own cars.
-SO I hired a team to create a database collection for cars 
-SO THAT I could use the front end to add in and compare my own cars
 
-## How to use
+## How to Install
 
 Clone files
 Run npm install
 Run npm start
 
-## Collaborators
+## How to Use 
+Click on What IS Car Data? to know what car data even is.
+Click on Your Car Data to enter your cars' data into the database.
+CLick on Compare Your Car to compare your cars' data to many other cars.
+
+## Credits&Licensure
 
 Maxwell Colby
 Diego Pena 
