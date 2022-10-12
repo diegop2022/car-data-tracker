@@ -13,15 +13,57 @@
   </head>
   <body>
     <header>
-      <h1 class="display-3">Car Data Tracker</h1>
+      <h1 class="display-3 text-center">Car Data Tracker</h1>
     </header>
     <main>
-      <p class="intro">
+      <p class="lead text-center">
         Not set on which car you want to buy? You came to the right place. This
         website we created is here to help to come to a solution on the perfect
         car for you. We have a huge selection for different cars that you can
-        compare from each other.
+        compare from each other. Please use our vehicle search section to find
+        your car with ease.
       </p>
+      <div class="container">
+        <div class="card row-cols-3 d-inline-block">
+          <label for="Year">Year:</label>
+          <select id="year">
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="2008">2008</option>
+            <option value="2007">2007</option>
+            <option value="2006">2006</option>
+            <option value="2005">2005</option>
+            <option value="2004">2004</option>
+            <option value="2003">2003</option>
+            <option value="2002">2002</option>
+            <option value="2001">2001</option>
+            <option value="2000">2000</option>
+          </select>
+          <label for="make">Make:</label>
+          <select name="make" id="make">
+            <option value="Nissan">Nissan</option>
+            <option value="Honda">Honda</option>
+          </select>
+          <label for="model">Model:</label>
+          <select name="model" id="model">
+            <option value="Maxima">Maxima</option>
+            <option value="Civic">Civic</option>
+          </select>
+        </div>
+      </div>
     </main>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
