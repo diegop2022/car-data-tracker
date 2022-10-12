@@ -15,8 +15,8 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      console.log('login successful', response)
-      // document.location.replace('/dashboard/');
+      console.log('Login Successful', response)
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
@@ -42,7 +42,8 @@ async function signupFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard/');
+      console.log('Signup Successful')
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
