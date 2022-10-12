@@ -34,7 +34,7 @@ app.get('/dashboard', (req, res) => {
     return;
   }
 
-  res.render('dashboard', {layout : 'index'});
+  res.render('dashboard', {layout : 'index', loggedIn : req.session.loggedIn});
 });
 
 app.get('/login', (req, res) => {
@@ -43,7 +43,7 @@ app.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login', {layout : 'index'});
+  res.render('login', {layout : 'index', loggedIn : req.session.loggedIn});
 });
 
 app.get('/', (req, res) => {

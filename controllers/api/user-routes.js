@@ -62,7 +62,7 @@ router.post('/login', (req, res) => {
         res.status(404).json({ message: 'Something went wrong' })
         return;
       }
-      
+
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
@@ -73,6 +73,8 @@ router.post('/login', (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
+  console.log('here')
+
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
