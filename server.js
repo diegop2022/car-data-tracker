@@ -28,6 +28,15 @@ const hbs = handlebars.create({ helpers });
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+app.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login', {layout : 'index'});
+});
+
 app.get('/', (req, res) => {
   //Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
   res.render('main', {layout : 'index'});

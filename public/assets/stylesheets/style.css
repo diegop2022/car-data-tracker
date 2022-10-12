@@ -1,15 +1,17 @@
-li {
-  font-size: 2rem;
-  width: 300px;
-  margin: 4px;
-  padding: 4px;
-  list-style: none
-  }
-
-.midlaner {
-  background-color: #eeeeee
+.btn-no-style {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: #225ca3;
+  font-size: 100%;
+  font-weight: bold;
+  transition: color .1s;
+  margin-left: 16px;
 }
 
-.toplaner {
-  background-color: #ffea00
+.btn-no-style:hover {
+  background: none;
+  color: #3486eb;
 }
