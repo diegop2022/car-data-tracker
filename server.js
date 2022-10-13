@@ -1,27 +1,62 @@
+const path = require('path');
 const express = require('express');
-const db = require('./db/connection');
-const apiRoutes = require('./routes/apiRoutes');
+const session = require('express-session');
+const handlebars = require('express-handlebars');
 
-const PORT = process.env.PORT || 3001;
 const app = express();
+const PORT = process.env.PORT || 3001;
 
-// Express middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+const sequelize = require("./config/connection");
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// Use apiRoutes
-app.use('/api', apiRoutes);
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 
-// Default response for any other request (Not Found)
-app.use((req, res) => {
-  res.status(404).end();
+app.use(session(sess));
+
+const helpers = require('./utils/helpers');
+
+const hbs = handlebars.create({ helpers });
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+app.get('/dashboard', (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('dashboard', {layout : 'index', loggedIn : req.session.loggedIn});
 });
 
-// Start server after DB connection
-db.connect(err => {
-  if (err) throw err;
-  console.log('Database connected.');
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+app.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login', {layout : 'index', loggedIn : req.session.loggedIn});
+});
+
+app.get('/', (req, res) => {
+  //Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
+  res.render('main', {layout : 'index', loggedIn : req.session.loggedIn});
   });
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(require('./controllers/'));
+
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });
