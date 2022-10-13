@@ -15,3 +15,10 @@
   background: none;
   color: #3486eb;
 }
+
+header {
+    border: 10px solid;
+    text-align: center;
+    background-color: grey;
+}
+
