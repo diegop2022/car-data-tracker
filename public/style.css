@@ -10,6 +10,20 @@ header {
     justify-content: end;
 }
 
+.btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: 3px solid black;
+    border-radius: 5px;
+    float: right;
+}
+
+.btn:hover {
+    background-color: #3e8e41
+}
+
 /* Cars Dropdown Menu */
 
 /* Dropdown Button */
