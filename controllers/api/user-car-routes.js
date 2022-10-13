@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const userCars = require('../../models/userCar');
+const userCars = require('../../models/userCars');
 
 // gets all the user's cars using "/api/usercar" endpoint 
 router.get('/', (req, res) => {
@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     userCars.findAll()
         .then(dbUserData => res.json(dbUserData))
         .catch(err => {
-            console.log(err);
+            console.log(err)
             res.status(500).json(err)
         })
 })
