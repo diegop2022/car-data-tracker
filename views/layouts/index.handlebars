@@ -11,22 +11,22 @@
       <div class="wrapper">
     <header>
       <h1>
-        <a href="/">Car Tracker</a>
+        <a href="/" class="title">Car Tracker</a>
       </h1>
     </header>
       <nav>
         {{#if loggedIn}}
         <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
+        <button id="logout" class="btn-no-style button">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login" class="button">login</a>
         {{/if}}
       </nav>
     <main>
       {{{ body }}}
     </main>
     <footer>
-      Thanks for visiting!
+      <h1 class="footer-text">Made by Maxwell Colby, Diego Pena, Chistopher Mata, Scott Blangeres, and Elizabeth Madrigal ♡ 2022</h1>
     </footer>
   </div>
   

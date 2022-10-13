@@ -1,3 +1,24 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9fbfd;
+}
+
+main {
+  padding: 200px;
+}
+
 .btn-no-style {
   background: none;
   border: none;
@@ -22,3 +43,21 @@ header {
     background-color: grey;
 }
 
+footer {
+  flex: 1;
+  border: 10px solid;
+  text-align: center;
+  background-color: grey; 
+}
+
+.footer-text {
+  font-size: x-large;
+}
+
+.button {
+  text-decoration: none;
+}
+
+.title {
+  text-decoration: none;
+}
