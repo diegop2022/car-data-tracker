@@ -1,4 +1,4 @@
-    <div class="display-cars">
+<div class="display-cars">
       <div class="dropdown">
         <button class="dropbtn">Cars</button>
         <div class="dropdown-cars">
@@ -15,32 +15,36 @@
         </div>
       </div>
     </div>
-
     <div class="car-data">
       <div class="seed-cars">
+        <h2 class="title">Car</h2>
         <h2 class="seed-make">Make</h2>
         <h2 class="seed-model">Model</h2>
         <h2 class="seed-year">Year</h2>
         <h2 class="seed-engine">Engine-Type</h2>
         <h2 class="seed-price">Price</h2>
       </div>
-
       <div class="user-cars">
+        <h2 class="title">User Car</h2>
         <h2 class="user-make">Make</h2>
         <h2 class="user-model">Model</h2>
         <h2 class="user-year">Year</h2>
         <h2 class="user-engine">Engine-Type</h2>
         <h2 class="user-price">Price</h2>
       </div>
-
       <div class="create">
         <div class="user-cars-create">
           <h1>Create Car</h1>
-          <input class="user-make-create" placeholder="User Make" type="text"></input>
-          <input class="user-model-create" placeholder="User Model"></input>
-          <input class="user-year-create" placeholder="User Year"></input>
-          <input class="user-engine-create" placeholder="User Engine-Type"></input>
-          <input class="user-price-create" placeholder="User Price"></input>
+          <form id="create-car-form">
+            <input name=make class="user-make-create" placeholder="User Make" type="text"></input>
+            <input name=model class="user-model-create" placeholder="User Model" type="text"></input>
+            <input name=year class="user-year-create" placeholder="User Year" type="number"></input>
+            <input name=engine class="user-engine-create" placeholder="User Engine-Type" type="text"></input>
+            <input name=price class="user-price-create" placeholder="User Price" type="number"></input>
+            <button class="btn">Add Car</button>
+          </form>
         </div>
       </div>
     </div>
+
+<script src="assets/javascript/dashboard.js"></script>
