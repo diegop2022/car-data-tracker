@@ -25,13 +25,12 @@
     <main>
       {{{ body }}}
     </main>
-    <footer>
-      Thanks for visiting!
-    </footer>
   </div>
   
   {{#if loggedIn}}
   <script src="assets/javascript/logout.js"></script>
+  <{{else}}
+  <script src="assets/javascript/main.js"></script>
   {{/if}}
   </body>
 </html>
